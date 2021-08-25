@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
   height: 100%;
+  border: 1px solid black;
+  margin-bottom: 9vh;
+  scroll-snap-align: start;
 }
 .mainLogo {
   width: 20%;

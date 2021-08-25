@@ -6,6 +6,7 @@
   width: 100vw;
   height: 7vh;
   font-size: 1rem;
+  scroll-snap-align: end;
 }
 
 .footerCont {

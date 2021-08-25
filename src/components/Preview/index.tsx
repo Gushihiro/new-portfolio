@@ -3,12 +3,16 @@ import './Preview.css'
 export default function Preview() {
   return (
     <div className="previewWrapper">
-      <div className=" preview">
-        <h2>1</h2>
-      </div>
-      <div className="preview">
-        <h2>2</h2>
-      </div>
+      <a href="#proj1">
+        <div className=" preview">
+          <h2>1</h2>
+        </div>
+      </a>
+      <a href="#proj2">
+        <div className="preview">
+          <h2>2</h2>
+        </div>
+      </a>
       <div className="preview">
         <h2>3</h2>
       </div>
