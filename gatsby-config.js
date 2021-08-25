@@ -4,6 +4,7 @@ module.exports = {
     title: "test",
   },
   plugins: [
+    "gatsby-plugin-typescript",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",

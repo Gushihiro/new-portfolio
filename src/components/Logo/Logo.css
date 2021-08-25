@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.mainLogo {
+  width: 20%;
+  height: 20%;
+  box-shadow: 0 0 30px rgb(13, 91, 128);
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.884);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
