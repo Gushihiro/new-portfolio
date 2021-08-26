@@ -1,10 +1,10 @@
-// @ts-ignore
-import Typewriter from 'typewriter-effect'
+import * as React from 'react'
+import './Header.css'
 
-const Header = () => {
+const Header = ({ children }: any) => {
   return (
-    <div>
-      <Typewriter />
+    <div className='header'>
+      {children}
     </div>
     )
 }

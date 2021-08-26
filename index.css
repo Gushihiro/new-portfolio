@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'KaiseiHarunoUmi-Medium';
+  src: local('KaiseiHarunoUmi-Bold'), url(./src/fonts/KaiseiHarunoUmi-Medium.ttf) format('truetype');
+}
+
 html {scroll-snap-type: y mandatory}
 
 * {
   scrollbar-width: none;
+  font-family: 'KaiseiHarunoUmi-Medium', serif;
 }
 
 .mainPage {
@@ -18,4 +24,12 @@ html {scroll-snap-type: y mandatory}
   height: 100vh;
   scroll-snap-align: start;
   overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  
 }
