@@ -33,6 +33,7 @@
   width: 50vw;
   height: 70vh;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .proj1Info {
@@ -44,7 +45,7 @@
   width: 50vw;
   height: 10vh;
   position: absolute;
-  top: 72%;
+  top: 76%;
   left: 22%;
 }
 

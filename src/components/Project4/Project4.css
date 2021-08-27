@@ -1,4 +1,4 @@
-.proj2 {
+.proj4 {
   background-color: black;
   display: flex;
   justify-content: flex-end;
@@ -7,17 +7,17 @@
   padding-right: 20vw;
 }
 
-.proj2 h1 {
+.proj4 h1 {
   font-family: 'Azonix';
   padding: .5rem;
   background-color: black;
   position: absolute;
-  top: 50%;
+  top: 25%;
   right: 9%;
   border-radius:10px;
 }
 
-.proj2 h3 {
+.proj4 h3 {
   position: absolute;
   background-color: black;
   padding: .5rem;
@@ -28,20 +28,20 @@
   font-size: 2.5rem;
 }
 
-.proj2Info h4 {
+.proj4Info h4 {
   font-family: 'Kaisei-HarunoUmi-Medium';
   margin-right: 2vw;
   color: white;
 }
 
-.crudSS {
+.vedomySS {
   width: 50vw;
   height: 70vh;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.proj2Info {
+.proj4Info {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -51,10 +51,10 @@
   height: 10vh;
   position: absolute;
   top: 76%;
-  right: 4%;
+  right: 9%;
 }
 
-.proj2Btn {
+.proj4Btn {
   display: flex;
   flex-direction: column;
   margin-right: 15%;

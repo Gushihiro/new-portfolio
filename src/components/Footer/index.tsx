@@ -29,7 +29,7 @@ export default function Footer() {
           </a>
         </div>
         <div className='copyright'>
-          <p>© Copyright 2021 Gushihiro |</p>
+          <p>© Copyright 2021 Hiroto Robinson | Gushihiro</p>
         </div>
       </div>
     </div>

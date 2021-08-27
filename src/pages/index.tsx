@@ -9,6 +9,7 @@ import Project3 from '../components/Project3'
 import Project4 from '../components/Project4'
 import Footer from '../components/Footer'
 import Spacer from '../images/wavebackground2.svg'
+import Spacer2 from '../images/wavetopspacer.svg'
 // styles
 import '../../index.css'
 // markup
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <Project2 />
       <Project3 />
       <Project4 />
+        <img className='spacer2' src={Spacer2} alt="space" />
       <Footer />
     </div>
   )

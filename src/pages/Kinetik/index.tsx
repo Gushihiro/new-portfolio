@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import ScreenShot from '../../images/kinetikSS.png'
 import './Kinetik.css'
+import DesktopView from '../../images/kinetikView.png'
 const KinetikPage = () => {
 
   return (
@@ -12,7 +13,9 @@ const KinetikPage = () => {
         <Link to={`/#kinetik`}>
           <button className='backBtn' type='button'>Back</button>
         </Link>
-        <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />
+        <Link to={`http://kinetikapp.herokuapp.com/`} target='_blank'>
+          <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />
+        </Link>
         <div className='proj1Info'>
           <h4>MySQL </h4>
           <h4>|</h4>
@@ -32,7 +35,8 @@ const KinetikPage = () => {
         </div>
       </div>
       <div className='kinetikDetail'>
-        <h1>Details</h1>
+        <img className='kinetikDesktop' src={DesktopView} alt='Desktop'/>
+        <h1>A Mobile-First Goal Tracking Web Application</h1>
       </div>
     </div>
   )

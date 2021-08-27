@@ -1,63 +1,64 @@
-.proj2 {
-  background-color: black;
+
+.proj3 {
+  padding-left: 20vw;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  background-color: black;
   position: relative;
-  padding-right: 20vw;
 }
 
-.proj2 h1 {
+.proj3 h1 {
   font-family: 'Azonix';
   padding: .5rem;
   background-color: black;
   position: absolute;
-  top: 50%;
-  right: 9%;
+  top: 70%;
+  left: 9%;
   border-radius:10px;
 }
 
-.proj2 h3 {
+.proj3 h3 {
   position: absolute;
   background-color: black;
   padding: .5rem;
   border-radius: 10px;
   font-family: 'Kaisei-HarunoUmi-Medium';
-  top: 70%;
-  right: 55%;
+  top: 55%;
+  left: 52%;
   font-size: 2.5rem;
 }
 
-.proj2Info h4 {
-  font-family: 'Kaisei-HarunoUmi-Medium';
-  margin-right: 2vw;
-  color: white;
-}
-
-.crudSS {
+.ouiSS {
   width: 50vw;
   height: 70vh;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.proj2Info {
+.proj3Info {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-right: 1vw;
+  margin-left: 1vw;
   padding-top: 10vh;
   width: 50vw;
   height: 10vh;
   position: absolute;
   top: 76%;
-  right: 4%;
+  left: 20%;
 }
 
-.proj2Btn {
+.proj3Info h4 {
+  font-family: 'Kaisei-HarunoUmi-Medium';
+  margin-left: 2vw;
+  color: white;
+}
+
+.proj3Btn {
   display: flex;
   flex-direction: column;
-  margin-right: 15%;
+  margin-left: 15%;
   height: 30vh;
   justify-content: space-between;
 }

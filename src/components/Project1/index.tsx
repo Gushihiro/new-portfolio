@@ -7,7 +7,9 @@ export default function Project1() {
     <div className='project proj1' id='kinetik'>
       <h1>Kinetik</h1>
       <h3>Web App</h3>
-      <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />
+      <Link to={`/Kinetik`}>
+        <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />
+      </Link>
       <div className='proj1Info'>
         <h4>MySQL </h4>
         <h4>|</h4>

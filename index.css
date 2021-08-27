@@ -13,6 +13,7 @@ html {scroll-snap-type: y mandatory}
 * {
   scrollbar-width: none;
   font-family: 'KaiseiHarunoUmi-Medium', serif;
+  margin: 0;
 }
 
 .mainPage {
@@ -37,6 +38,13 @@ html {scroll-snap-type: y mandatory}
   width: 100%;
   height: 10%;
   background-image: url('./src/images/wavebackground2.svg');
+  position: relative;
+}
+
+.spacer2 {
+  width: 100%;
+  height: 10%;
+  background-image: url('./src/images/wavetopspacer.svg');
   position: relative;
 }
 
