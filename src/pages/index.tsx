@@ -8,6 +8,7 @@ import Project2 from '../components/Project2'
 import Project3 from '../components/Project3'
 import Project4 from '../components/Project4'
 import Footer from '../components/Footer'
+import Spacer from '../images/wavebackground2.svg'
 // styles
 import '../../index.css'
 // markup
@@ -17,38 +18,10 @@ const IndexPage = () => {
     <div className='mainPage'>
       <Header>
         <Logo />
-        <div className='typeText'>
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(`Hello, I'm Hiroto Robinson, a Full-Stack Web Developer based out of Seattle, Washington.`)
-              .start()
-          }}
-          options={{
-            delay: 40,
-            deleteSpeed: 20
-          }}
-        />
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .pauseFor(5000)
-              .typeString(`I have a love for puzzles, solving complex problems, and perpetual learning.`)
-              .start()
-          }}
-          options={{
-            delay: 40
-          }}
-        />
+        <div className='navContent'>
+          <p>//Scroll Down</p>
         </div>
-          <div className='skillsList'>
-            <h6>
-              HTML5 | CSS3 | JavaScript | TypeScript | React | GitHub | git | Express | MySQL | SQL | NoSQL | MongoDB | Bootstrap | Materialize | Material-Ui | Handlebars | jQuery | GatsbyJS
-            </h6>
-          </div>
-          <div className='navContent'>
-            <p>//Scroll Down</p>
-          </div>
+        <img className='spacer' src={Spacer} alt="space" />      
       </Header>
       <Project1 />
       <Project2 />
