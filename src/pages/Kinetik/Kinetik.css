@@ -1,0 +1,24 @@
+
+.kinetikPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.backBtn {
+  position: absolute;
+  top: 10%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.kinetikDetail {
+  height: 100vh;
+  width: 100vw;
+}
