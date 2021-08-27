@@ -17,6 +17,7 @@ const IndexPage = () => {
     <div className='mainPage'>
       <Header>
         <Logo />
+        <div className='typeText'>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -39,11 +40,15 @@ const IndexPage = () => {
             delay: 40
           }}
         />
-        <div className='skillsList'>
-          <h6>
-            HTML5 | CSS3 | JavaScript | TypeScript | React | GitHub | git | Express | MySQL | SQL | NoSQL | MongoDB | Bootstrap | Materialize | Material-Ui | Handlebars | jQuery | GatsbyJS
-          </h6>
         </div>
+          <div className='skillsList'>
+            <h6>
+              HTML5 | CSS3 | JavaScript | TypeScript | React | GitHub | git | Express | MySQL | SQL | NoSQL | MongoDB | Bootstrap | Materialize | Material-Ui | Handlebars | jQuery | GatsbyJS
+            </h6>
+          </div>
+          <div className='navContent'>
+            <p>//Scroll Down</p>
+          </div>
       </Header>
       <Project1 />
       <Project2 />

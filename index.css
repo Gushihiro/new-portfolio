@@ -17,6 +17,7 @@ html {scroll-snap-type: y mandatory}
   justify-content: center;
   align-items: center;
   font-size: 1.75rem;
+  color: rgb(207, 207, 207);
 }
 
 .project {
@@ -27,9 +28,47 @@ html {scroll-snap-type: y mandatory}
   scroll-behavior: smooth;
 }
 
+.mainContent {
+  display: flex;
+  justify-content: center;
+}
+
+.typeText {
+  background-color: rgba(0, 0, 0, 0.884);
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgb(76, 165, 201);
+  padding: 2rem;
+}
+
 .skillsList {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgb(76, 165, 201);
+  margin-top: 5vh;
+  background-color: rgba(0, 0, 0, 0.884);
+  color: white;
+}
+
+.navContent {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  align-self: flex-end;
+  margin-top: -15vh;
+  margin-right: 3vw;
+  padding-top: 2vh;
+  min-height: 40vh;
+  box-shadow: 0 0 1px rgb(13, 91, 128);
+  background-color: rgba(0, 0, 0, 0.507);
+
+  border-radius: 5px;
+  text-align:start;
+}
+
+.navContent:hover {
+  box-shadow: 0 0 15px rgb(13, 91, 128);
+  background-color: rgba(0, 0, 0, 0.884);
 }

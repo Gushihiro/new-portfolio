@@ -3,13 +3,15 @@
   display: flex;
   justify-content: center;
   height: 100%;
-  margin-bottom: 9vh;
+  margin-bottom:3vh;
   scroll-snap-align: start;
 }
+
 .mainLogo {
   width: 20%;
   height: 20%;
   box-shadow: 0 0 30px rgb(13, 91, 128);
+  border: 2px solid rgb(193, 230, 255);
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.884);
   margin-top: 5vh;
