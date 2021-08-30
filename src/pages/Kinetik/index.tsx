@@ -36,7 +36,7 @@ const KinetikPage = () => {
       </div>
       <div className='kinetikDetail'>
         <img className='kinetikDesktop' src={DesktopView} alt='Desktop'/>
-        <h1>A Mobile-First Goal Tracking Web Application</h1>
+        <h1>A Mobile-First Social Goal Tracking Web Application</h1>
       </div>
     </div>
   )

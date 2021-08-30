@@ -16,7 +16,7 @@ const ContactCrudPage = () => {
             <button className='btn'>View GitHub</button>
           </Link>
         </div>
-        <h1>Kinetik</h1>
+        <h1>Contact CRUD</h1>
         <h3>Web App</h3>
         <Link to={`/#contacts-crud`}>
           <button className='backBtn2' type='button'>Back</button>
@@ -25,18 +25,16 @@ const ContactCrudPage = () => {
           <img className='crudSS' src={ScreenShot} alt='Contacts-CRUD' />
         </Link>
         <div className='proj2Info'>
-          <h4>MySQL </h4>
+          <h4>Axios </h4>
           <h4>|</h4>
-          <h4>Express </h4>
+          <h4>TypeScript </h4>
           <h4>|</h4>
           <h4>React </h4>
-          <h4>|</h4>
-          <h4>NodeJS </h4>
         </div>
       </div>
       <div className='crudDetail'>
         <img className='crudDesktop' src={DesktopView} alt='Desktop'/>
-        <h1>A Mobile-First Goal Tracking Web Application</h1>
+        <h1>CRUD Application Utilizing Axios-Imported API Contacts</h1>
       </div>
     </div>
   )

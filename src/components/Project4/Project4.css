@@ -8,7 +8,7 @@
 }
 
 .proj4 h1 {
-  font-family: 'Azonix';
+  font-family: 'LemonMilk-Reg';
   padding: .5rem;
   background-color: black;
   position: absolute;
@@ -22,14 +22,14 @@
   background-color: black;
   padding: .5rem;
   border-radius: 10px;
-  font-family: 'Kaisei-HarunoUmi-Medium';
+  font-family: 'LGCafe';
   top: 70%;
   right: 55%;
   font-size: 2.5rem;
 }
 
 .proj4Info h4 {
-  font-family: 'Kaisei-HarunoUmi-Medium';
+  font-family: 'LGCafe';
   margin-right: 2vw;
   color: white;
 }

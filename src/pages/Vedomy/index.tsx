@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import ScreenShot from '../../images/vedomyscreenshot.png'
 import './Vedomy.css'
-// import DesktopView from '../../images/crudView.png'
+import DesktopView from '../../images/vedomyView.png'
 const VedomyPage = () => {
 
   return (
@@ -34,10 +34,10 @@ const VedomyPage = () => {
           <h4>NodeJS</h4>
         </div>
       </div>
-      {/* <div className='vedomyDetail'>
+      <div className='vedomyDetail'>
         <img className='vedomyDesktop' src={DesktopView} alt='Desktop'/>
-        <h1>A Mobile-First Goal Tracking Web Application</h1>
-      </div> */}
+        <h1>A Meditation App with Personal Wellness Tracking Applicability </h1>
+      </div>
     </div>
   )
 }

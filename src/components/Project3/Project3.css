@@ -9,7 +9,7 @@
 }
 
 .proj3 h1 {
-  font-family: 'Azonix';
+  font-family: 'LemonMilk-Reg';
   padding: .5rem;
   background-color: black;
   position: absolute;
@@ -23,7 +23,7 @@
   background-color: black;
   padding: .5rem;
   border-radius: 10px;
-  font-family: 'Kaisei-HarunoUmi-Medium';
+  font-family: 'LGCafe';
   top: 55%;
   left: 52%;
   font-size: 2.5rem;
@@ -50,7 +50,7 @@
 }
 
 .proj3Info h4 {
-  font-family: 'Kaisei-HarunoUmi-Medium';
+  font-family: 'LGCafe';
   margin-left: 2vw;
   color: white;
 }

@@ -1,74 +1,57 @@
 
-.proj1 {
-  padding-left: 20vw;
+.aboutPreview {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow-y: auto;
+  scroll-behavior: smooth;
   background-color: black;
   position: relative;
 }
 
-.proj1 h1 {
-  font-family: 'LemonMilk-Reg';
+.aboutPreview h1 {
+  font-family: 'LemonMilk-Light';
   padding: .5rem;
   background-color: black;
-  position: absolute;
-  top: 30%;
-  left: 10%;
   border-radius:10px;
+  position: absolute;
+  bottom: 30%;
 }
 
-.proj1 h3 {
+.aboutPreview h3 {
   position: absolute;
   background-color: black;
   padding: .5rem;
   border-radius: 10px;
-  font-family: 'LGCafe';
+  font-family: 'Kaisei-HarunoUmi-Medium';
   top: 60%;
   left: 55%;
   font-size: 2.5rem;
 }
 
-.kinetikSS {
+.aboutPreSS {
   width: 50vw;
   height: 70vh;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.proj1Info {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-left: 1vw;
-  padding-top: 10vh;
-  width: 50vw;
-  height: 10vh;
-  position: absolute;
-  top: 76%;
-  left: 22%;
+.aboutBtn {
+  margin-top: 5vh;
 }
 
-.proj1Info h4 {
-  font-family: 'LGCafe';
-  margin-left: 2vw;
-  color: white;
-}
-
-.proj1Btn {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15%;
-  height: 30vh;
-  justify-content: space-between;
-}
-.btn {
-  width: 15rem;
+.abBtn {
+  width: 30rem;
   height: 4rem;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
+  border:none;
   font-family: 'LGCafe-Bold';
   background-color: hsla(205, 100%, 50%, 0.014);
   border: 1px solid white;
@@ -78,8 +61,7 @@
   transition: .2s;
 }
 
-.btn:hover {
+.abBtn:hover {
   box-shadow: 0 0px 5px white, inset 0 0 5px white;
-  transform: scale(1.05);
-  
+  transform: scale(1.05)
 }

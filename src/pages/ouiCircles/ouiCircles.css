@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.kinetikDetail {
+.circlesDetail {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,11 +32,11 @@
   width: 100vw;
 }
 
-.kinetikDetail h1 {
+.circlesDetail h1 {
   margin-top: 10vh;
   color: black;
 }
 
-.kinetikDesktop {
+.circlesDesktop {
   width: 70%;
 }

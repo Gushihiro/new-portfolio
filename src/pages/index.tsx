@@ -2,7 +2,7 @@ import * as React from 'react'
 import Header from '../components/Header'
 import Logo from '../components/Logo'
 import Typewriter from 'typewriter-effect'
-import Preview from '../components/Preview'
+import AboutPreview from '../components/AboutPreview'
 import Project1 from '../components/Project1'
 import Project2 from '../components/Project2'
 import Project3 from '../components/Project3'
@@ -24,6 +24,7 @@ const IndexPage = () => {
         </div>
         <img className='spacer' src={Spacer} alt="space" />      
       </Header>
+      <AboutPreview />
       <Project1 />
       <Project2 />
       <Project3 />

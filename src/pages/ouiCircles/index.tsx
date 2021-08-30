@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 import './ouiCircles.css'
-import DesktopView from '../../images/kinetikView.png'
+import DesktopView from '../../images/circlesView.png'
 
 const ouiCirclesPage = () => {
 
@@ -34,6 +34,10 @@ const ouiCirclesPage = () => {
           <button className='btn'>View GitHub</button>
         </Link>
         </div>
+      </div>
+      <div className='circlesDetail'>
+        <img className='circlesDesktop' src={DesktopView} alt='Desktop'/>
+        <h1>Community Forum Utilizing Geospatial Data to Provide Local Events to Users</h1>
       </div>
     </div>
   )

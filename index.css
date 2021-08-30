@@ -8,11 +8,36 @@
   src: local('Azonix'), url(./src/fonts/Azonix.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'LemonMilk-Med';
+  src: local('LemonMilk'), url(./src/fonts/LEMONMILK-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'LemonMilk-Reg';
+  src: local('LemonMilk'), url(./src/fonts/LEMONMILK-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'LemonMilk-Light';
+  src: local('LemonMilk'), url(./src/fonts/LEMONMILK-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'LGCafe';
+  src: local('LGCafe'), url(./src/fonts/Louis\ George\ Cafe.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'LGCafe-Bold';
+  src: local('LGCafe'), url(./src/fonts/Louis\ George\ Cafe\ Bold.ttf) format('truetype');
+}
+
 html {scroll-snap-type: y mandatory}
 
 * {
   scrollbar-width: none;
-  font-family: 'KaiseiHarunoUmi-Medium', serif;
+  font-family: 'LemonMilk-Light', serif;
   margin: 0;
 }
 

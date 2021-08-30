@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-.kinetikDetail {
+.crudDetail {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,7 +33,7 @@
   width: 100vw;
 }
 
-.kinetikDetail h1 {
+.crudDetail h1 {
   margin-top: 10vh;
   color: black;
 }
