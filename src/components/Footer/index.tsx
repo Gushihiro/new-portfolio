@@ -7,7 +7,8 @@ import LinkedinIcon from '../../images/LinkedinIcon.jpg'
 import TwitterIcon from '../../images/twitterIcon.jpg'
 // @ts-ignore
 import ResumeIcon from '../../images/resumeIcon.jpg'
-
+// @ts-ignore
+import HomeIcon from '../../images/homeIcon.png'
 import './Footer.css'
 
 export default function Footer() {
@@ -26,6 +27,9 @@ export default function Footer() {
           </a>
           <a href={'../../docs/Hiroto_Robinson_Resume.pdf'} target='_blank'>
             <img className="footerImg" src={ResumeIcon} alt="Resume" />
+          </a>
+          <a href={'/#top'}>
+            <img className='footerImg' src={HomeIcon} alt='Home' />
           </a>
         </div>
         <div className='copyright'>
