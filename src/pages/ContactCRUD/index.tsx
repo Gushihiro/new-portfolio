@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import ScreenShot from '../../images/contactCrudSS.png'
 import './ContactCRUD.css'
 import DesktopView from '../../images/crudView.png'
+import ScreenShotPage from '../../images/crudSSpage.png'
+import Footer from '../../components/Footer'
 const ContactCrudPage = () => {
 
   return (
@@ -35,6 +37,17 @@ const ContactCrudPage = () => {
       <div className='crudDetail'>
         <img className='crudDesktop' src={DesktopView} alt='Desktop'/>
         <h1>CRUD Application Utilizing Axios-Imported API Contacts</h1>
+        <img className='crudSSpage' src={ScreenShotPage} alt='Contacts CRUD' />
+        <div className='crudInfo'>
+          <h1>Technologies:</h1>
+          <ul>
+            <li>Material-Ui</li>
+            <li>TypeScript</li>
+            <li>Axios</li>
+          </ul>
+          <p>Simple, fully-functioning CRUD application. </p>
+        </div>
+        <Footer />
       </div>
     </div>
   )

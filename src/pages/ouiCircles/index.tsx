@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 import './ouiCircles.css'
 import DesktopView from '../../images/circlesView.png'
-
+import ScreenShotPage from '../../images/ouiSSpage.png'
+import Footer from '../../components/Footer'
 const ouiCirclesPage = () => {
 
   return (
@@ -38,6 +39,22 @@ const ouiCirclesPage = () => {
       <div className='circlesDetail'>
         <img className='circlesDesktop' src={DesktopView} alt='Desktop'/>
         <h1>Community Forum Utilizing Geospatial Data to Provide Local Events to Users</h1>
+        <img className='ouiSSpage' src={ScreenShotPage} alt='Contacts CRUD' />
+        <div className='ouiInfo'>
+          <h1>Technologies:</h1>
+          <ul>
+            <li>Sequelize</li>
+            <li>Cloudinary</li>
+            <li>Bcrypt</li>
+            <li>Handlebars</li>
+            <li>GeoIp / GeoLocation</li>
+            <li>MomentJS</li>
+          </ul>
+          <h2>Find local events or create your own</h2>
+          <p>Events within a 15-mile radius will display on your front page.</p>
+          <p>Leave a comment on events you want to attend or think are exciting.</p>
+        </div>
+        <Footer />
       </div>
     </div>
   )
