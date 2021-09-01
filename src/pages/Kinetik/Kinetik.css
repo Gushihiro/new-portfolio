@@ -43,7 +43,6 @@
 }
 
 .kinetikSSPage {
-  /* border-top: 1px solid black; */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.274);
   margin-top: 10vh;
   width: 99%;
@@ -60,9 +59,14 @@
   justify-content: space-around;
 }
 
-.kinetikInfo p, .kinetikInfo li {
+.kinetikInfo li {
   font-family: 'LGcafe';
   font-size: 2.5rem;
+}
+
+.kinetikInfo p {
+  font-family: 'LGcafe';
+  font-size: 2rem;
 }
 
 .kinetikInfo ul {
@@ -136,4 +140,5 @@
   border: .5rem solid black;
   border-radius: 5px;
   width: 70%;
+  box-shadow: 0 0 5px black;
 }

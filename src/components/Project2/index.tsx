@@ -14,11 +14,13 @@ export default function Project2() {
       <h3>Web App</h3>
       <img className='crudSS' src={ScreenShot} alt='Contact CRUD' />
       <div className='proj2Info'>
-        <h4>Axios </h4>
+        <h4>MySQL </h4>
         <h4>|</h4>
-        <h4>TypeScript </h4>
+        <h4>Express </h4>
         <h4>|</h4>
         <h4>React </h4>
+        <h4>|</h4>
+        <h4>NodeJS </h4>
       </div>
     </div>
   )

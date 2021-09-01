@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import ScreenShot from '../../images/vedomyscreenshot.png'
 import './Vedomy.css'
 import DesktopView from '../../images/vedomyView.png'
+import ScreenShotPage from '../../images/vedomySSpage.png'
+import Footer from '../../components/Footer'
 const VedomyPage = () => {
 
   return (
@@ -37,6 +39,20 @@ const VedomyPage = () => {
       <div className='vedomyDetail'>
         <img className='vedomyDesktop' src={DesktopView} alt='Desktop'/>
         <h1>A Meditation App with Personal Wellness Tracking Applicability </h1>
+        <img className='vedomySSpage' src={ScreenShotPage} alt='Vedomy' />
+        <div className='vedomyInfo'>
+          <h1>Additional Technologies:</h1>
+          <ul>
+            <li>MomentJS</li>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+            <li>Materialize</li>
+          </ul>
+          <div className='vedomyMisc'>
+            <p>Track your mood, meditate using the animated breathing box, and receive new recipes, yoga poses, and motivational quotes daily.</p>
+          </div>
+        </div>
+        <Footer />
       </div>
     </div>
   )

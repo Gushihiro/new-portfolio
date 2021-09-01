@@ -29,7 +29,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 5vh;
-  height: 200vh;
+  min-height: 200vh;
   width: 100vw;
 }
 
@@ -40,4 +40,56 @@
 
 .vedomyDesktop {
   width: 70%;
+}
+
+.vedomySSpage {
+  /* border-top: 1px solid black; */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.274);
+  margin-top: 10vh;
+  width: 99%;
+}
+
+.vedomyInfo {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: black;
+  justify-content: space-around;
+}
+
+.vedomyInfo li {
+  font-family: 'LGcafe';
+  font-size: 2.5rem;
+}
+
+.vedomyInfo p {
+  font-family: 'LGcafe';
+  font-size: 2rem;
+}
+
+.vedomyInfo ul {
+  border-top: 10px dashed black;
+  padding: 5vh 0;
+}
+
+.vedomyInfo h2 {
+  font-size: 4rem;
+  margin-bottom: 5vh;
+}
+
+.vedomyInfo li {
+  list-style:none;
+  font-size: 2.5rem;
+}
+
+.vedomyMisc {
+  margin: 10vh 0;
+  padding: 5rem;
+  border: .5rem solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  width: 80%;
 }
