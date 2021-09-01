@@ -28,7 +28,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 5vh;
-  height: 200vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -54,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 150vh;
+  min-height: 50vh;
   color: black;
   justify-content: space-around;
 }
@@ -76,10 +76,17 @@
 
 .ouiInfo h2 {
   font-size: 4rem;
-  margin-bottom: 5vh;
 }
 
 .ouiInfo li {
   list-style:none;
   font-size: 2.5rem;
+}
+
+.ouiMisc {
+  margin: 10vh 0;
+  padding: 5rem;
+  border: .5rem solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
 }

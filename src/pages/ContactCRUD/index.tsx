@@ -27,11 +27,13 @@ const ContactCrudPage = () => {
           <img className='crudSS' src={ScreenShot} alt='Contacts-CRUD' />
         </Link>
         <div className='proj2Info'>
-          <h4>Axios </h4>
+          <h4>MySQL </h4>
           <h4>|</h4>
-          <h4>TypeScript </h4>
+          <h4>Express </h4>
           <h4>|</h4>
           <h4>React </h4>
+          <h4>|</h4>
+          <h4>NodeJS </h4>
         </div>
       </div>
       <div className='crudDetail'>
@@ -39,16 +41,18 @@ const ContactCrudPage = () => {
         <h1>CRUD Application Utilizing Axios-Imported API Contacts</h1>
         <img className='crudSSpage' src={ScreenShotPage} alt='Contacts CRUD' />
         <div className='crudInfo'>
-          <h1>Technologies:</h1>
+          <h1>Additional Technologies:</h1>
           <ul>
             <li>Material-Ui</li>
             <li>TypeScript</li>
             <li>Axios</li>
           </ul>
-          <p>Simple, fully-functioning CRUD application. </p>
+          <div className='crudMisc'>
+            <p>Simple, fully-functioning CRUD application. </p>
+          </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

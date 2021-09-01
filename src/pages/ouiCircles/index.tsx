@@ -41,7 +41,7 @@ const ouiCirclesPage = () => {
         <h1>Community Forum Utilizing Geospatial Data to Provide Local Events to Users</h1>
         <img className='ouiSSpage' src={ScreenShotPage} alt='Contacts CRUD' />
         <div className='ouiInfo'>
-          <h1>Technologies:</h1>
+          <h1>Additional Technologies:</h1>
           <ul>
             <li>Sequelize</li>
             <li>Cloudinary</li>
@@ -51,11 +51,13 @@ const ouiCirclesPage = () => {
             <li>MomentJS</li>
           </ul>
           <h2>Find local events or create your own</h2>
-          <p>Events within a 15-mile radius will display on your front page.</p>
-          <p>Leave a comment on events you want to attend or think are exciting.</p>
+          <div className='ouiMisc'>
+            <p>Events within a 15-mile radius will display on your front page.</p>
+            <p>Leave a comment on events you want to attend or think are exciting.</p>
+          </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

@@ -45,7 +45,7 @@ const KinetikPage = () => {
         <h1>A Social Goal Tracking Web Application</h1>
         <img className='kinetikSSPage' src={ScreenShotPage} alt='Kinetik' />
         <div className='kinetikInfo'>
-          <h1>Technologies:</h1>
+          <h1>Additional Technologies:</h1>
           <ul>
             <li>SASS</li>
             <li>React Calendar</li>
@@ -69,11 +69,13 @@ const KinetikPage = () => {
           <div className='kinetikCal'>
             <h2>Use the Calendar to Track Your Progress</h2>
             <img className='calendarSnip' src={CalendarSnip} alt='Kinetik Calendar' />
-            <p>The calendar displays what days you've completed your goals. If even a single goal is left unfinished, the day is marked with a red dot. If you complete all your goals, a blue.</p>
+            <div className='calendarMisc'>
+              <p>The calendar displays what days you've completed your goals. If even a single goal is left unfinished, the day is marked with a red dot. If you complete all your goals, a blue.</p>
+            </div>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }
