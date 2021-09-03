@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 // @ts-ignore
 import logo from '../../images/MainLogo.png'
 import './Logo.css'
@@ -6,14 +7,89 @@ export default function Logo() {
   return (
     <div className="wrapper" id='top'>
       <div className="userName">
-        <h1>Hiroto</h1>
-        <h1>Robinson</h1>
-        <h3>Full Stack Web Developer</h3>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            x: -700
+          }}
+          animate={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1
+          }}
+        >
+          Hiroto
+        </motion.h1>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            x: -700
+          }}
+          animate={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1
+          }}
+        >
+          Robinson
+        </motion.h1>
+        <motion.h3
+          initial={{
+            opacity: 0,
+            height: 0
+          }}
+          animate={{
+            opacity: 1,
+            height: "3rem"
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 2.5
+          }}
+        >
+          Full Stack Web Developer
+        </motion.h3>
       </div>
-      <div className='logoDiv'>
+      <motion.div
+        initial={{ 
+          opacity: 0,
+          x: 400
+        }}
+        animate={{
+          opacity: 1,
+          x: 0
+        }}
+        transition={{
+          duration: 1.5,
+          delay: .5
+        }}
+        className='logoDiv'
+      >
         <img className="mainLogo"src={logo} alt="Main Logo" />
-        <h1 className="logoText">Portfolio</h1>
-      </div>
+        <motion.h1 
+          initial={{
+            opacity: 0.1,
+            y: 400
+          }}
+          animate={{
+            opacity: 1,
+            y: 0
+          }}
+          transition={{
+            duration: 2,
+            delay: 2
+          }}
+          className="logoText"
+        >
+          Portfolio
+        </motion.h1>
+      </motion.div>
     </div>
   )
 }
