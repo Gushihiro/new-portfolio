@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 // @ts-ignore
 import logo from '../../images/MainLogo.png'
 import './Logo.css'
+import { rgb } from 'chalk'
 export default function Logo() {
   return (
     <div className="wrapper" id='top'>
@@ -67,28 +68,11 @@ export default function Logo() {
         }}
         transition={{
           duration: 1.5,
-          delay: .5
+          delay: .7
         }}
         className='logoDiv'
       >
         <img className="mainLogo"src={logo} alt="Main Logo" />
-        <motion.h1 
-          initial={{
-            opacity: 0.1,
-            y: 400
-          }}
-          animate={{
-            opacity: 1,
-            y: 0
-          }}
-          transition={{
-            duration: 2,
-            delay: 2
-          }}
-          className="logoText"
-        >
-          Portfolio
-        </motion.h1>
       </motion.div>
     </div>
   )

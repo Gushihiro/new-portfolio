@@ -33,7 +33,14 @@
   src: local('LGCafe'), url(./src/fonts/Louis\ George\ Cafe\ Bold.ttf) format('truetype');
 }
 
-html {scroll-snap-type: y mandatory}
+@font-face {
+  font-family: 'Elysian';
+  src: local('Elysian-Fields'), url(./src/fonts/Elysian\ Fields.otf) format('opentype');
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
 
 * {
   scrollbar-width: none;
@@ -57,6 +64,7 @@ html {scroll-snap-type: y mandatory}
   scroll-snap-align: start;
   overflow-y: auto;
   scroll-behavior: smooth;
+  
 }
 
 .spacer {
