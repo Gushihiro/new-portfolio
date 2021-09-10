@@ -31,7 +31,7 @@ const AboutMePage = () => {
         </p>
       </div>
       <Link to={`/#about`}>
-        <button type='button'>Back</button>
+        <button className='aboutBack' type='button'>Back</button>
       </Link>
       <Footer />
     </motion.div>
