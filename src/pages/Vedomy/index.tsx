@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
 import ScreenShot from '../../images/vedomyscreenshot.png'
 import './Vedomy.css'
 import DesktopView from '../../images/vedomyView.png'
@@ -8,25 +9,101 @@ import Footer from '../../components/Footer'
 const VedomyPage = () => {
 
   return (
-    <div className='vedomyPage'>
+    <motion.div 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{
+        duration: 1.1
+      }}
+      className='vedomyPage'
+    >
       <div className='project proj4'>
         <div className='proj4Btn'>
           <Link to={`https://gushihiro.github.io/Vedomy/`} target='_blank'>
-            <button className='btn' type='button'>View Site</button>
+          <motion.button
+            initial={{opacity: 0, rotateY: 90}}
+            animate={{opacity: 1, rotateY: 0}}
+            transition={{
+              duration: 1.1,
+              delay: 1
+            }}
+            className='btn' 
+            type='button'
+          >
+            View Site
+          </motion.button>
           </Link>
           <Link to={`https://github.com/Gushihiro/Vedomy`} target='_blank'>
-            <button className='btn'>View GitHub</button>
+          <motion.button
+            initial={{opacity: 0, rotateY: 90}}
+            animate={{opacity: 1, rotateY: 0}}
+            transition={{
+              duration: 1.1,
+              delay: 1.2
+            }}
+            className='btn'
+          >
+            View GitHub
+          </motion.button>
           </Link>
         </div>
-        <h1>Vedomy</h1>
-        <h3>Web App</h3>
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          Vedomy
+        </motion.h1>
+        <motion.h3
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          Web App
+        </motion.h3>
         <Link to={`/#vedomy`}>
           <button className='backBtn2' type='button'>Back</button>
         </Link>
         <Link to={`https://gushihiro.github.io/Vedomy/`} target='_blank'>
-          <img className='vedomySS' src={ScreenShot} alt='Vedomy' />
+          <motion.img 
+            className='vedomySS' 
+            src={ScreenShot} 
+            alt='Vedomy' 
+          />
         </Link>
-        <div className='proj4Info'>
+        <motion.div 
+          initial={{
+            y: 50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+          className='proj4Info'
+        >
           <h4>MySQL </h4>
           <h4>|</h4>
           <h4>Express </h4>
@@ -34,7 +111,7 @@ const VedomyPage = () => {
           <h4>JavaScript </h4>
           <h4>|</h4>
           <h4>NodeJS</h4>
-        </div>
+        </motion.div>
       </div>
       <div className='vedomyDetail'>
         <img className='vedomyDesktop' src={DesktopView} alt='Desktop'/>
@@ -54,7 +131,7 @@ const VedomyPage = () => {
         </div>
         <Footer />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

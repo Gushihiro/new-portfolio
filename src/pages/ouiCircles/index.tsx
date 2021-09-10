@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 import './ouiCircles.css'
 import DesktopView from '../../images/circlesView.png'
@@ -8,17 +9,68 @@ import Footer from '../../components/Footer'
 const ouiCirclesPage = () => {
 
   return (
-    <div className='ouiCirclesPage'>
+    <motion.div 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{
+        duration: 1.1
+      }}
+      className='ouiCirclesPage'
+    >
       <div className='project proj3'>
-        <h1>ouiCircles</h1>
-        <h3>Community Forum</h3>
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          ouiCircles
+        </motion.h1>
+        <motion.h3
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          Community Forum
+        </motion.h3>
         <Link to={`/#ouiCircles`}>
           <button className='backBtn' type='button'>Back</button>
         </Link>
         <Link to={'http://oui-circle-app.herokuapp.com/'} target='_blank'>
           <img className='ouiSS' src={ScreenShot} alt='ouiCircles' />
         </Link>
-        <div className='proj3Info'>
+        <motion.div 
+          initial={{
+            y: 50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+          className='proj3Info'
+        >
           <h4>MySQL </h4>
           <h4>|</h4>
           <h4>Express </h4>
@@ -26,13 +78,34 @@ const ouiCirclesPage = () => {
           <h4>Handlebars </h4>
           <h4>|</h4>
           <h4>NodeJS </h4>
-        </div>
+        </motion.div>
         <div className='proj3Btn'>
         <Link to={`http://oui-circle-app.herokuapp.com/`} target='_blank'>
-          <button className='btn' type='button'>View Site</button>
+        <motion.button
+          initial={{opacity: 0, rotateY: 90}}
+          animate={{opacity: 1, rotateY: 0}}
+          transition={{
+            duration: 1.1,
+            delay: 1
+          }}
+          className='btn' 
+          type='button'
+        >
+          View Site
+        </motion.button>
         </Link>
         <Link to={`https://github.com/Gushihiro/ouiCircles-Community-Bulletin`} target='_blank'>
-          <button className='btn'>View GitHub</button>
+        <motion.button
+          initial={{opacity: 0, rotateY: 90}}
+          animate={{opacity: 1, rotateY: 0}}
+          transition={{
+            duration: 1.1,
+            delay: 1.2
+          }}
+          className='btn'
+        >
+          View GitHub
+        </motion.button>
         </Link>
         </div>
       </div>
@@ -58,7 +131,7 @@ const ouiCirclesPage = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   )
 }
 

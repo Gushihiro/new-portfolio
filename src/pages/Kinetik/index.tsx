@@ -1,28 +1,90 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/kinetikSS.png'
 import './Kinetik.css'
+// @ts-ignore
 import DesktopView from '../../images/kinetikView.png'
+// @ts-ignore
 import ScreenShotPage from '../../images/kinetikSSpage.png'
+// @ts-ignore
 import GoalsSnip from '../../images/kinetikGoals1.png'
+// @ts-ignore
 import GoalsSnip2 from '../../images/kinetikGoals2.png'
+// @ts-ignore
 import GoalsSnip3 from '../../images/kinetikGoals3.png'
+// @ts-ignore
 import CalendarSnip from '../../images/kinetikCalendar.png'
+
 import Footer from '../../components/Footer'
+
+
 const KinetikPage = () => {
 
   return (
-    <div className='kinetikPage'>
+    <motion.div 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{
+        duration: 1.1
+      }}
+      className='kinetikPage'
+    >
       <div className='project proj1'>
-        <h1>Kinetik</h1>
-        <h3>Web App</h3>
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          Kinetik
+        </motion.h1>
+        <motion.h3
+          initial={{
+            y: -50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+        >
+          Web App
+        </motion.h3>
         <Link to={`/#kinetik`}>
           <button className='backBtn' type='button'>Back</button>
         </Link>
         <Link to={`http://kinetikapp.herokuapp.com/`} target='_blank'>
           <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />
         </Link>
-        <div className='proj1Info'>
+        <motion.div 
+          initial={{
+            y: 50,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.1,
+            delay: .5
+          }}
+          className='proj1Info'
+        >
           <h4>MySQL </h4>
           <h4>|</h4>
           <h4>Express </h4>
@@ -30,13 +92,34 @@ const KinetikPage = () => {
           <h4>React </h4>
           <h4>|</h4>
           <h4>NodeJS </h4>
-        </div>
+        </motion.div>
         <div className='proj1Btn'>
           <Link to={`http://kinetikapp.herokuapp.com/`} target='_blank'>
-            <button className='btn' type='button'>View Site</button>
+            <motion.button
+              initial={{opacity: 0, rotateY: 90}}
+              animate={{opacity: 1, rotateY: 0}}
+              transition={{
+                duration: 1.1,
+                delay: 1
+              }}
+              className='btn' 
+              type='button'
+            >
+              View Site
+            </motion.button>
           </Link>
           <Link to={`https://github.com/Gushihiro/Kinetic`} target='_blank'>
-            <button className='btn'>View GitHub</button>
+            <motion.button
+              initial={{opacity: 0, rotateY: 90}}
+              animate={{opacity: 1, rotateY: 0}}
+              transition={{
+                duration: 1.1,
+                delay: 1.2
+              }}
+              className='btn'
+            >
+              View GitHub
+            </motion.button>
           </Link>
         </div>
       </div>
@@ -76,7 +159,7 @@ const KinetikPage = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   )
 }
 
