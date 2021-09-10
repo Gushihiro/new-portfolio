@@ -21,9 +21,9 @@ export default function Resume() {
 class Example extends React.Component {
   render() {
     return (
-      <Link to={this.props.data.pdf.publicURL} target="_blank">
+      <a href={this.props.data.pdf.publicURL} target="_blank">
         <img className='footerImg' src={ResumeIcon} alt="Resume" />
-      </Link>
+      </a>
     );
   }
 }
