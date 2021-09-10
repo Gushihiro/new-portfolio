@@ -10,6 +10,8 @@ import ResumeIcon from '../../images/resumeIcon.jpg'
 // @ts-ignore
 import HomeIcon from '../../images/homeIcon.png'
 import './Footer.css'
+import Res from '../Resume'
+
 
 export default function Footer() {
   return (
@@ -25,9 +27,7 @@ export default function Footer() {
           <a href={'https://twitter.com/gushihiro'} target='_blank'>
             <img className="footerImg" src={TwitterIcon} alt="Twitter" />
           </a>
-          <a href={'../../docs/Hiroto_Robinson_Resume.pdf'} target='_blank'>
-            <img className="footerImg" src={ResumeIcon} alt="Resume" />
-          </a>
+          <Res />
           <a href={'/#top'}>
             <img className='footerImg' src={HomeIcon} alt='Home' />
           </a>
