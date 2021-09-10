@@ -3,6 +3,7 @@ import './Project2.css'
 import { Link } from 'gatsby'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/contactCrudSS.png'
 export default function Project2() {
 
