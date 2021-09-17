@@ -16,6 +16,7 @@ export default function AboutPreview() {
     <div className="aboutPreview" id='about'>
       <Link to={'/AboutMe'}>
         <motion.img 
+          key={3}
           ref={ref}
           initial={{
             opacity: 0,
@@ -24,6 +25,10 @@ export default function AboutPreview() {
           animate={{
             opacity: inView ? 1:0,
             scale: inView ? 1:.7
+          }}
+          exit={{
+            opacity: 0,
+            scale: .7
           }}
           transition={{
             duration: 1.5
@@ -34,6 +39,7 @@ export default function AboutPreview() {
         />
       </Link>
       <motion.h1
+        key={4}
         ref={ref}
         initial={{
           opacity: 0,
@@ -43,20 +49,30 @@ export default function AboutPreview() {
           opacity: inView ? 1:0,
           y: inView ? 0:100
         }}
+        exit={{
+          opacity: 0,
+          y: 100
+        }}
         transition={{
           duration: 1.3,
-          delay: 1
+          delay: .3
         }}
-      >I Love Innovation, Efficiency, and Story</motion.h1>
+      >
+        I Love Innovation, Efficiency, and Story
+      </motion.h1>
       <div className='aboutBtn'>
         <Link to={'/AboutMe'}>
           <motion.button 
+            key={5}
             ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: inView ? 1:0 }}
+            exit={{
+              opacity: 0
+            }}
             transition={{
-              duration: 2,
-              delay: 1.5
+              duration: 1,
+              delay: .7
             }}
             className='abBtn' 
             type='button'

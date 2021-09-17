@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import { motion } from 'framer-motion'
 // @ts-ignore
 import logo from '../../images/MainLogo.png'
 import './Logo.css'
 import { rgb } from 'chalk'
 export default function Logo() {
+
+
   return (
-    <div className="wrapper" id='top'>
+    <div className="wrapper">
+      <Element name='top' />
       <div className="userName">
         <motion.h1
           initial={{
@@ -17,10 +22,14 @@ export default function Logo() {
             opacity: 1,
             x: 0
           }}
-          transition={{
-            duration: 1.5,
-            delay: 1
+          exit={{
+            opacity: 0,
+            y: 100
           }}
+          transition={{
+            duration: 1.5
+          }}
+          id='top'
         >
           Hiroto
         </motion.h1>
@@ -33,9 +42,12 @@ export default function Logo() {
             opacity: 1,
             x: 0
           }}
+          exit={{
+            opacity: 0,
+            y: 100
+          }}
           transition={{
-            duration: 1.5,
-            delay: 1
+            duration: 1.5
           }}
         >
           Robinson
@@ -49,9 +61,12 @@ export default function Logo() {
             opacity: 1,
             height: "3rem"
           }}
+          exit={{
+            opacity: 0,
+            y: 100
+          }}
           transition={{
-            duration: 1.5,
-            delay: 2.5
+            duration: 1.5
           }}
         >
           Full Stack Web Developer
@@ -65,6 +80,10 @@ export default function Logo() {
         animate={{
           opacity: 1,
           x: 0
+        }}
+        exit={{
+          opacity: 0,
+          x: 400
         }}
         transition={{
           duration: 1.5,

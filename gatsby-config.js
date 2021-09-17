@@ -37,6 +37,6 @@ module.exports = {
         name: `files`,
         path: `${__dirname}/src/assets/files`
       }
-    }
+    },
   ],
 };
