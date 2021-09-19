@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Footer from '../../components/Footer'
 import './AboutMe.css'
+
 const AboutMePage = () => {
 
   return (
@@ -30,7 +31,7 @@ const AboutMePage = () => {
           
         </p>
       </div>
-      <Link to={`/#about`}>
+      <Link to={`/about`}>
         <button className='aboutBack' type='button'>Back</button>
       </Link>
       <Footer />

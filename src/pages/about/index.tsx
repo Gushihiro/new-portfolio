@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import ScreenShot from '../../images/AboutImgSS.jpg'
@@ -12,9 +12,15 @@ export default function AboutPreview() {
     rootMargin: '-100px 0px'
   })
 
+  const ssAni = {
+    visible: {
+      
+    }
+  }
+
   return (
     <div className="aboutPreview" id='about'>
-      <Link to={'/AboutMe'}>
+      <Link to={'/about+'}>
         <motion.img 
           key={3}
           ref={ref}
@@ -61,7 +67,7 @@ export default function AboutPreview() {
         I Love Innovation, Efficiency, and Story
       </motion.h1>
       <div className='aboutBtn'>
-        <Link to={'/AboutMe'}>
+        <Link to={'/about+'}>
           <motion.button 
             key={5}
             ref={ref}

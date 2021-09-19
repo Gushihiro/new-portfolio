@@ -1,6 +1,6 @@
 import React from 'react'
 import './Project2.css'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 // @ts-ignore
@@ -15,7 +15,7 @@ export default function Project2() {
   return (
     <div className='project proj2' id='contacts-crud'>
       <div className='proj2Btn'>
-      <Link to={`/ContactCRUD`}>
+      <Link to={`/contacts-crud+`}>
         <motion.button 
           ref={ref}
           initial={{ opacity: 0 }}

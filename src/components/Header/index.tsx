@@ -19,33 +19,82 @@ const Header = () => {
     rootMargin: '0px',
   })
 
+  const scrollAni = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0,
+      y: -100,
+      transition: {
+        duration: 1.5,
+
+      }
+    },
+  }
+
+  const spacerAni = {
+    visible: {
+      y: 0,
+      transition: {
+        duration: 1.2
+      }
+    },
+    hidden: {
+      y: '-75vh'
+    },
+    exit: {}
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0,
+      opacity: 1
+    },
+    exit: {
+      y: '-40%',
+      transition: {
+        duration: 1.5,
+        delay: 1
+      }
+    }
+  }
+
   return (
-      <div className='header'>
+      <motion.div 
+        variants={pageAni}
+        initial={"inital"}
+        exit={"exit"}
+        className='header'
+      >
         <Logo />
         <div className='navContent'>
           <motion.p
             key={1}
             ref={ref}
-            animate={{y: inView ? 0:-100, opacity: inView ? 1:0}} 
-            initial={{y: -100, opacity: 0}}
-            exit={{y: -100, opacity: 0}}
-            transition={{ 
-              duration: 1.5
-            }}
+            variants={scrollAni}
+            animate={"visible"}
+            initial={"hidden"}
+            exit={"hidden"}
           >
             //Scroll Down
           </motion.p>
         </div>
         <motion.img 
           key={2}
-          animate={{ y: 0}} 
-          initial={{ y: '-50vh'}}
-          transition={{ duration: 1.1 }} 
+          variants={spacerAni}
+          initial={"hidden"}
+          animate={"visible"} 
           className='spacer' 
           src={Spacer} 
           alt="space" 
         />      
-      </div>
+      </motion.div>
     )
 }
 

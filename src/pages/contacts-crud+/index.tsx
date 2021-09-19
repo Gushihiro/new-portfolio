@@ -1,9 +1,12 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/contactCrudSS.png'
 import './ContactCRUD.css'
+// @ts-ignore
 import DesktopView from '../../images/crudView.png'
+// @ts-ignore
 import ScreenShotPage from '../../images/crudSSpage.png'
 import Footer from '../../components/Footer'
 const ContactCrudPage = () => {
@@ -79,7 +82,7 @@ const ContactCrudPage = () => {
         >
           Web App
         </motion.h3>
-        <Link to={`/#contacts-crud`}>
+        <Link to={`/contacts-crud`}>
           <button className='backBtn2' type='button'>Back</button>
         </Link>
         <Link to={`https://gushihiro.github.io/contacts-crud/`} target='_blank'>

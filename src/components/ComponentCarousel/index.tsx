@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 import './ComponentCarousel.css'
 
 import Header from '../Header'
-import AboutPreview from '../AboutPreview'
-import AboutDetails from '../../pages/AboutMe'
-import Project1 from '../Project1'
-import KinetikDetails from '../../pages/Kinetik'
-import Project2 from '../Project2'
-import CrudDetails from '../../pages/ContactCRUD'
-import Project3 from '../Project3'
-import ouiCirclesDetails from '../../pages/ouiCircles'
-import Project4 from '../Project4'
-import VedomyDetails from '../../pages/Vedomy'
+import AboutPreview from '../../pages/about'
+import AboutDetails from '../../pages/about+'
+import Project1 from '../../pages/kinetik'
+import KinetikDetails from '../../pages/kinetik+'
+import Project2 from '../../pages/contacts-crud'
+import CrudDetails from '../../pages/contacts-crud+'
+import Project3 from '../../pages/ouicircles'
+import ouiCirclesDetails from '../../pages/ouicircles+'
+import Project4 from '../../pages/vedomy'
+import VedomyDetails from '../../pages/vedomy+'
 
 
 export default function ComponentCarousel() {
@@ -39,17 +39,17 @@ export default function ComponentCarousel() {
       exitBeforeEnter
     >
       <Switch location={location} key={location.pathname}>
-        <Route path='/vedomy' component={Project4} />
-        <Route path='/vedomy+' component={VedomyDetails} />
-        <Route path='/ouicircles' component={Project3} />
-        <Route path='/ouicircles+' component={ouiCirclesDetails} />
-        <Route path='/contacts-crud' component={Project2} />
-        <Route path='/contacts-crud+' component={CrudDetails} />
-        <Route path='/kinetik' component={Project1} />
-        <Route path='/kinetik+' component={KinetikDetails} />
-        <Route path='/about' component={AboutPreview} />
-        <Route path='/about+' component={AboutDetails} />
-        <Route path='/' component={Header} />
+        <Route exact path='/vedomy+' component={VedomyDetails} />
+        <Route exact path='/vedomy' component={Project4} />
+        <Route exact path='/ouicircles+' component={ouiCirclesDetails} />
+        <Route exact path='/ouicircles' component={Project3} />
+        <Route exact path='/contacts-crud+' component={CrudDetails} />
+        <Route exact path='/contacts-crud' component={Project2} />
+        <Route exact path='/kinetik+' component={KinetikDetails} />
+        <Route exact path='/kinetik' component={Project1} />
+        <Route exact path='/about+' component={AboutDetails} />
+        <Route exact path='/about' component={AboutPreview} />
+        <Route exact path='/' component={Header} />
       </Switch>
     </AnimatePresence>
   )
