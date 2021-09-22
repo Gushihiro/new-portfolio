@@ -14,67 +14,163 @@ export default function Project1() {
     rootMargin: '-100px 0px'
   })
 
+  const h1Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: -400,
+      opacity: 0
+    },
+    exit: {
+      x: -100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const h3Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: 400,
+      opacity: 0
+    },
+    exit: {
+      x: 100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const ssAni = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      x: -100
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 1.5,
+        delay: .7
+      }
+    }
+  }
+
+  const stackAni = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 1.3
+      }
+    },
+    hidden: {
+      y: 100,
+      opacity: 0
+    },
+    exit: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        duration: 1.3
+      }
+    }
+  }
+
+  const btnAni = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: .7
+      }
+    }
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '-40%',
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
   return (
-    <div className='project proj1' id='kinetik'>
+    <motion.div 
+      variants={pageAni}
+      initial={"initial"}
+      exit={"exit"}
+      className='project proj1' 
+      id='kinetik'
+    >
       <motion.h1 
         key={6}
         ref={ref}
-        initial={{
-          x: -400
-        }}
-        animate={{
-          x: inView ? 0:-400
-        }}
-        exit={{
-          x: -400
-        }}
-        transition={{
-          duration: 2,
-          delay: .5
-        }}
+        variants={h1Ani}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
       >
         Kinetik
       </motion.h1>
       <motion.h3
         key={7}
         ref={ref}
-        initial={{
-          opacity: 0,
-          x: 400
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          x: inView ? 0:400
-        }}
-        exit={{
-          opacity: 0,
-          x: 400
-        }}
-        transition={{
-          duration: 2,
-          delay: .5
-        }}
+        variants={h3Ani}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
       >
         Web App
       </motion.h3>
       <Link to={`/kinetik+`}>
         <motion.img 
           key={8}
-          ref={ref} 
-          initial={{
-            opacity: 0,
-            x: -100
-          }} 
-          animate={{
-            opacity: inView ? 1:0,
-            x: inView ? 0: -100
-          }}
-          exit={{
-            opacity: 0
-          }}
-          transition={{
-            duration: 1.5
-          }} 
+          ref={ref}
+          variants={ssAni}
+          initial={"hidden"} 
+          animate={"visible"}
+          exit={"exit"}
           className='kinetikSS' 
           src={ScreenShot} 
           alt='Kinetik' 
@@ -83,22 +179,10 @@ export default function Project1() {
       <motion.div 
         key={9}
         ref={ref}
-        initial={{
-          opacity: 0,
-          y: 100
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          y: inView ? 0:100
-        }}
-        exit={{
-          opacity: 0,
-          y: 100
-        }}
-        transition={{
-          duration: 1.5,
-          delay: 1.3
-        }}
+        variants={stackAni}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
         className='proj1Info'
       >
         <h4>MySQL </h4>
@@ -114,13 +198,10 @@ export default function Project1() {
         <motion.button
           key={10}
           ref={ref}
-          initial={{opacity: 0}}
-          animate={{opacity: inView ? 1:0}}
-          exit={{opacity: 0}}
-          transition={{
-            duration: 1,
-            delay: .7
-          }}
+          variants={btnAni}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
           className='btn' 
           type='button'
         >
@@ -128,6 +209,6 @@ export default function Project1() {
       </motion.button>
       </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

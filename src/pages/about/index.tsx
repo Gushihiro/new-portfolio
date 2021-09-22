@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/AboutImgSS.jpg'
 import './AboutPreview.css'
 
@@ -14,31 +15,95 @@ export default function AboutPreview() {
 
   const ssAni = {
     visible: {
-      
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      scale: .7
+    },
+    exit: {
+      opacity: 0,
+      scale: .7,
+      transition: {
+        duration: 1.5
+      }
+    }
+  }
+
+  const textAni = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.3,
+        delay: .5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      y: 100
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+      transition: {
+        duration: 1.3
+      }
+    }
+  }
+
+  const btnAni = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: .7
+      }
+    }
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '-40%',
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
     }
   }
 
   return (
-    <div className="aboutPreview" id='about'>
+    <motion.div 
+      variants={pageAni}
+      initial={"inital"}
+      exit={"exit"}
+      className="aboutPreview" 
+      id='about'
+    >
       <Link to={'/about+'}>
         <motion.img 
           key={3}
           ref={ref}
-          initial={{
-            opacity: 0,
-            scale: .7
-          }}
-          animate={{
-            opacity: inView ? 1:0,
-            scale: inView ? 1:.7
-          }}
-          exit={{
-            opacity: 0,
-            scale: .7
-          }}
-          transition={{
-            duration: 1.5
-          }}
+          variants={ssAni}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
           className='aboutPreSS' 
           src={ScreenShot} 
           alt="VSCode" 
@@ -47,22 +112,10 @@ export default function AboutPreview() {
       <motion.h1
         key={4}
         ref={ref}
-        initial={{
-          opacity: 0,
-          y: 100
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          y: inView ? 0:100
-        }}
-        exit={{
-          opacity: 0,
-          y: 100
-        }}
-        transition={{
-          duration: 1.3,
-          delay: .3
-        }}
+        variants={textAni}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
       >
         I Love Innovation, Efficiency, and Story
       </motion.h1>
@@ -71,15 +124,10 @@ export default function AboutPreview() {
           <motion.button 
             key={5}
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1:0 }}
-            exit={{
-              opacity: 0
-            }}
-            transition={{
-              duration: 1,
-              delay: .7
-            }}
+            variants={btnAni}
+            initial={"hidden"}
+            animate={"visible"}
+            exit={"exit"}
             className='abBtn' 
             type='button'
           >
@@ -87,6 +135,6 @@ export default function AboutPreview() {
           </motion.button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import './ComponentCarousel.css'
 
@@ -16,24 +16,9 @@ import Project4 from '../../pages/vedomy'
 import VedomyDetails from '../../pages/vedomy+'
 
 
-export default function ComponentCarousel() {
-
+export default function ComponentCarousel({ currentFrame }: any) {
   const location = useLocation();
-
-  console.log()
-
-  let scrolling = false;
-
-  window.scroll = () => {
-    scrolling = true;
-  };
-
-  setInterval(() => {
-    if (scrolling) {
-      scrolling = false;
-    }
-  }, 300)
-
+  
   return (
     <AnimatePresence
       exitBeforeEnter

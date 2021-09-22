@@ -1,9 +1,12 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 import './ouiCircles.css'
+// @ts-ignore
 import DesktopView from '../../images/circlesView.png'
+// @ts-ignore
 import ScreenShotPage from '../../images/ouiSSpage.png'
 import Footer from '../../components/Footer'
 const ouiCirclesPage = () => {

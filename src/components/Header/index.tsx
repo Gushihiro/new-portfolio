@@ -53,8 +53,7 @@ const Header = () => {
 
   const pageAni = {
     initial: {
-      y: 0,
-      opacity: 1
+      y: 0
     },
     exit: {
       y: '-40%',

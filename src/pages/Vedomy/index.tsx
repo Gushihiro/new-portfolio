@@ -3,6 +3,7 @@ import './Project4.css'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import ScreenShot from '../../images/vedomyscreenshot.png'
 export default function Project4() {
 
@@ -11,18 +12,143 @@ export default function Project4() {
     rootMargin: '-100px 0px'
   })
 
+  const h1Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: 400,
+      opacity: 0
+    },
+    exit: {
+      x: 100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const h3Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: -400,
+      opacity: 0
+    },
+    exit: {
+      x: -100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const ssAni = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      x: -100
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 1.5,
+        delay: .7
+      }
+    }
+  }
+
+  const stackAni = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 1.3
+      }
+    },
+    hidden: {
+      y: 100,
+      opacity: 0
+    },
+    exit: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        duration: 1.3
+      }
+    }
+  }
+
+  const btnAni = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: .7
+      }
+    }
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '40%',
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
   return (
-    <div className='project proj4' id='vedomy'>
+    <motion.div 
+      variants={pageAni}
+      initial={"initial"}
+      exit={"exit"}
+      className='project proj4' 
+      id='vedomy'
+    >
       <div className='proj4Btn'>
         <Link to={`/vedomy+`}>
           <motion.button 
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1:0 }}
-            transition={{
-              duration: 2,
-              delay: 1.5
-            }}
+            variants={btnAni}
+            initial={"hidden"}
+            animate={"visible"}
+            exit={"exit"}
             className='btn' 
             type='button'
           >
@@ -32,70 +158,38 @@ export default function Project4() {
       </div>
       <motion.h1
         ref={ref}
-        initial={{
-          opacity: 0,
-          x: 400
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          x: inView ? 0:400
-        }}
-        transition={{
-          duration: 2,
-          delay: 1
-        }}
+        variants={h1Ani}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
       >
         Vedomy
       </motion.h1>
       <motion.h3
         ref={ref}
-        initial={{
-          opacity: 0,
-          x: -400
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          x: inView ? 0:-400
-        }}
-        transition={{
-          duration: 2,
-          delay: 1
-        }}
+        variants={h3Ani}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
       >
         Web App
       </motion.h3>
       <motion.img 
         ref={ref}
-        initial={{
-          opacity: 0,
-          x: 100
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          x: inView ? 0:100
-        }}
-        transition={{
-          duration: 1.5,
-          delay: .2
-        }} 
+        variants={ssAni}
+        initial={"hidden"} 
+        animate={"visible"}
+        exit={"exit"}
         className='vedomySS' 
         src={ScreenShot} 
         alt='Vedomy' 
       />
       <motion.div 
         ref={ref}
-        initial={{
-          opacity: 0,
-          y: 100
-        }}
-        animate={{
-          opacity: inView ? 1:0,
-          y: inView ? 0:100
-        }}
-        transition={{
-          duration: 1.5,
-          delay: 1.3
-        }}
+        variants={stackAni}
+        initial={"hidden"}
+        animate={"visible"}
+        exit={"exit"}
         className='proj4Info'
       >
         <h4>MySQL </h4>
@@ -106,6 +200,6 @@ export default function Project4() {
         <h4>|</h4>
         <h4>NodeJS</h4>
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
