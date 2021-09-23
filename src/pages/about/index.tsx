@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import ScreenShot from '../../images/AboutImgSS.jpg'
 import './AboutPreview.css'
 
-export default function AboutPreview() {
+export default function AboutPreview({ scrollDir }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -75,12 +75,26 @@ export default function AboutPreview() {
     }
   }
 
-  const pageAni = {
+  const pageAniUp = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '40%',
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
+  const pageAniDown = {
     initial: {
       y: 0
     },
     exit: {
       y: '-40%',
+      opacity: 0,
       transition: {
         duration: 1.5,
         delay: .5
@@ -90,7 +104,7 @@ export default function AboutPreview() {
 
   return (
     <motion.div 
-      variants={pageAni}
+      variants={scrollDir==="up"? pageAniUp:pageAniDown}
       initial={"inital"}
       exit={"exit"}
       className="aboutPreview" 

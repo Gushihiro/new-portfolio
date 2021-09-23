@@ -6,7 +6,7 @@ import './Project3.css'
 // @ts-ignore
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 
-export default function Project3() {
+export default function Project3({ scrollDir }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -120,7 +120,21 @@ export default function Project3() {
     }
   }
 
-  const pageAni = {
+  const pageAniUp = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '40%',
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
+  const pageAniDown = {
     initial: {
       y: 0
     },
@@ -136,7 +150,7 @@ export default function Project3() {
 
   return (
     <motion.div 
-      variants={pageAni}
+      variants={scrollDir==="up"? pageAniUp:pageAniDown}
       initial={"initial"}
       exit={"exit"}
       className='project proj3' 

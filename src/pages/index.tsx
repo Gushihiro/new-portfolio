@@ -37,9 +37,35 @@ const IndexPage = () => {
 
   const [frameIdx, setFrameIdx] = useState(0)
   const [currentFrame, setCurrentFrame] = useState("Header")
+  const [scrollDir, setScrollDir] = useState("none")
   const { ref, inView } = useInView({
     rootMargin: '0px',
   })
+
+  const handleIncrement = () => {
+    setScrollDir("down")
+    if (frameIdx < 5) {
+      if (scrollDir === "down") {
+        setFrameIdx(frameIdx + 1)
+        setCurrentFrame(allFrames[frameIdx])
+      }
+    } else {
+      return
+    }
+  }
+
+  const handleDecrement = () => {
+    setScrollDir("up")
+    if (frameIdx > 0) {
+        setFrameIdx(frameIdx - 1)
+        setCurrentFrame(allFrames[frameIdx])
+    } else {
+      return
+    }
+  }
+
+  useEffect(() => {
+  }, [frameIdx])
 
   return (
     <Router>
@@ -47,18 +73,13 @@ const IndexPage = () => {
       exitBeforeEnter
     >
       <ReactScrollWheelHandler
-        upHandler={async ()=> {
-          console.log(frameIdx)
-          frameIdx > 0 ? await setFrameIdx(frameIdx - 1):null;
-          console.log(frameIdx)
-          await setCurrentFrame(allFrames[frameIdx])
+        upHandler={()=> {
+          handleDecrement()
         }}
         downHandler={async ()=> {
-          console.log(frameIdx)
-          frameIdx < 5 ? await setFrameIdx(frameIdx + 1):null;
-          console.log(frameIdx)
-          await setCurrentFrame(allFrames[frameIdx])
+          handleIncrement()
         }}
+        wheelConfig={[7, 100, .05, 0]}
       >
       <motion.div
         animate={{ opacity: 1}} 
@@ -68,11 +89,14 @@ const IndexPage = () => {
       >
         <ComponentCarousel 
           currentFrame={currentFrame}
+          scrollDir={scrollDir}
         />
         <NavMini
           currentFrame={currentFrame}
           setCurrentFrame={setCurrentFrame}
           setFrameIdx={setFrameIdx}
+          scrollDir={scrollDir}
+          frameIdx={frameIdx}
         />
       </motion.div>
       </ReactScrollWheelHandler>

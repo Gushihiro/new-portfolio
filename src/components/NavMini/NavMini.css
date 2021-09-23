@@ -19,7 +19,19 @@
   border-radius: 10px;
   background-color: white;
   padding: 1px;
-  transition-duration: .5s;
+  transition-duration: 1.5s;
+  transition-delay: .5s;
+}
+
+.navLinkActive {
+  border: 1px solid white;
+  height: 1px;
+  width: 5rem;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1px;
+  transition-duration: 1.5s;
+  transition-delay: .5s;
 }
 
 .navCont {

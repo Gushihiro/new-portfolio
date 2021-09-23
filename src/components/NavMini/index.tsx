@@ -4,29 +4,29 @@ import { Link, useHistory } from 'react-router-dom'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import './NavMini.css'
 
-export default function NavMini({ currentFrame, setCurrentFrame, setFrameIdx }: any) {
+export default function NavMini({ currentFrame, setCurrentFrame, setFrameIdx, frameIdx }: any) {
   
   const history = useHistory();
 
   const scrollPage = () => {
     
-    switch(currentFrame) {
-      case "Header":
+    switch(frameIdx) {
+      case 0:
         history.push('/');
         break;
-      case "AboutMe":
+      case 1:
         history.push('/about');
         break;
-      case "Kinetik":
+      case 2:
         history.push('/kinetik')
         break;
-      case "ContactsCRUD":
+      case 3:
         history.push('/contacts-crud');
         break;
-      case "ouiCircles":
+      case 4:
         history.push('/ouicircles');
         break;
-      case "Vedomy":
+      case 5:
         history.push('/vedomy');
         break;
       default:
@@ -36,7 +36,7 @@ export default function NavMini({ currentFrame, setCurrentFrame, setFrameIdx }: 
 
 useEffect(() => {
   scrollPage()
-}, [currentFrame])
+}, [frameIdx])
 
   return (
     <div className='navMini'>
@@ -50,7 +50,7 @@ useEffect(() => {
             setCurrentFrame("Header");
           }}
         >
-          <div className='navLink'/>
+          <div className={frameIdx === 0? 'navLinkActive':'navLink'}/>
         </div>
       </Link>
       <Link to={'/about'}>
@@ -63,7 +63,7 @@ useEffect(() => {
             setCurrentFrame("AboutMe");
           }}
         >
-          <div className='navLink' />
+          <div className={frameIdx === 1? 'navLinkActive':'navLink'} />
         </div>
       </Link>
       <Link to={'/kinetik'}>
@@ -76,7 +76,7 @@ useEffect(() => {
             setCurrentFrame("Kinetik");
           }}
         >
-          <div className='navLink' />
+          <div className={frameIdx === 2? 'navLinkActive':'navLink'} />
         </div>
       </Link>
       <Link to={'/contacts-crud'}>
@@ -89,7 +89,7 @@ useEffect(() => {
             setCurrentFrame("ContactsCRUD");
           }}
         >
-          <div className='navLink' />
+          <div className={frameIdx === 3? 'navLinkActive':'navLink'} />
         </div>
       </Link>
       <Link to={'/ouicircles'}>
@@ -102,7 +102,7 @@ useEffect(() => {
             setCurrentFrame("ouiCircles");
           }}
         >
-          <div className='navLink' />
+          <div className={frameIdx === 4? 'navLinkActive':'navLink'} />
         </div>
       </Link>
       <Link to={'/vedomy'}>
@@ -115,7 +115,7 @@ useEffect(() => {
             setCurrentFrame("Vedomy");
           }}
         >
-          <div className='navLink' />
+          <div className={frameIdx === 5? 'navLinkActive':'navLink'} />
         </div>
       </Link>
     </div>

@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 // @ts-ignore
 import ScreenShot from '../../images/contactCrudSS.png'
-export default function Project2() {
+export default function Project2({ scrollDir }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -119,7 +119,20 @@ export default function Project2() {
     }
   }
 
-  const pageAni = {
+  const pageAniUp = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      y: '40%',
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+  const pageAniDown = {
     initial: {
       y: 0
     },
@@ -135,7 +148,7 @@ export default function Project2() {
 
   return (
     <motion.div 
-      variants={pageAni}
+      variants={scrollDir==="up"? pageAniUp:pageAniDown}
       initial={"initial"}
       exit={"exit"}
       className='project proj2' 

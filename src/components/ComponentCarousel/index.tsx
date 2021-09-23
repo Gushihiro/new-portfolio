@@ -16,7 +16,7 @@ import Project4 from '../../pages/vedomy'
 import VedomyDetails from '../../pages/vedomy+'
 
 
-export default function ComponentCarousel({ currentFrame }: any) {
+export default function ComponentCarousel({ scrollDir }: any) {
   const location = useLocation();
   
   return (
@@ -24,17 +24,41 @@ export default function ComponentCarousel({ currentFrame }: any) {
       exitBeforeEnter
     >
       <Switch location={location} key={location.pathname}>
-        <Route exact path='/vedomy+' component={VedomyDetails} />
-        <Route exact path='/vedomy' component={Project4} />
+        <Route exact path='/vedomy+'>
+          <VedomyDetails />
+        </Route>
+        <Route exact path='/vedomy'>
+          <Project4 
+            scrollDir={scrollDir}
+          />
+        </Route>
         <Route exact path='/ouicircles+' component={ouiCirclesDetails} />
-        <Route exact path='/ouicircles' component={Project3} />
+        <Route exact path='/ouicircles'>
+          <Project3
+            scrollDir={scrollDir}
+          />
+        </Route>
         <Route exact path='/contacts-crud+' component={CrudDetails} />
-        <Route exact path='/contacts-crud' component={Project2} />
+        <Route exact path='/contacts-crud'>
+          <Project2 
+            scrollDir={scrollDir}
+          />
+        </Route>
         <Route exact path='/kinetik+' component={KinetikDetails} />
-        <Route exact path='/kinetik' component={Project1} />
+        <Route exact path='/kinetik'>
+          <Project1
+            scrollDir={scrollDir}
+          />
+        </Route>
         <Route exact path='/about+' component={AboutDetails} />
-        <Route exact path='/about' component={AboutPreview} />
-        <Route exact path='/' component={Header} />
+        <Route exact path='/about'>
+          <AboutPreview
+            scrollDir={scrollDir}
+          />
+        </Route>
+        <Route exact path='/'>
+          <Header />
+        </Route>
       </Switch>
     </AnimatePresence>
   )
