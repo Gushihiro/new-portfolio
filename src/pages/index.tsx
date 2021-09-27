@@ -89,9 +89,10 @@ const IndexPage = () => {
           setDetailPage={setDetailPage}
         />
         <NavMini
-          setFrameIdx={setFrameIdx}
-          scrollDir={scrollDir}
-          frameIdx={frameIdx}
+        setFrameIdx={setFrameIdx}
+        scrollDir={scrollDir}
+        frameIdx={frameIdx}
+        detailPage={detailPage}
         />
       </motion.div>
       </ReactScrollWheelHandler>

@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 // @ts-ignore
 import ScreenShot from '../../images/vedomyscreenshot.png'
+import NavMini from '../../components/NavMini'
+
 export default function Project4({ scrollDir, setDetailPage }: any) {
 
   const [ref, inView] = useInView({

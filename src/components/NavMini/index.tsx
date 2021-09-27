@@ -2,9 +2,10 @@ import React from 'react'
 import { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { motion } from 'framer-motion'
 import './NavMini.css'
 
-export default function NavMini({ setFrameIdx, frameIdx }: any) {
+export default function NavMini({ setFrameIdx, frameIdx, detailPage }: any) {
   
   const history = useHistory();
 
@@ -39,7 +40,7 @@ useEffect(() => {
 }, [frameIdx])
 
   return (
-    <div className='navMini'>
+    <motion.div className={detailPage ? 'navMiniHide':'navMini'}>
       <Link to={'/'}>
         <div
           key={10}
@@ -112,6 +113,6 @@ useEffect(() => {
           <div className={frameIdx === 5? 'navLinkActive':'navLink'} />
         </div>
       </Link>
-    </div>
+    </motion.div>
   )
 }
