@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import ScreenShot from '../../images/kinetikSS.png'
 // @ts-ignore
 import frontImg from '../../images/kinetic-logo.png'
-export default function Project1({ scrollDir }: any) {
+export default function Project1({ scrollDir, setDetailPage }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -186,7 +186,8 @@ export default function Project1({ scrollDir }: any) {
           exit={"exit"}
           className='kinetikSS' 
           src={ScreenShot} 
-          alt='Kinetik' 
+          alt='Kinetik'
+          onClick={()=>setDetailPage(true)}
         />
       </Link>
       <motion.div 
@@ -217,6 +218,7 @@ export default function Project1({ scrollDir }: any) {
           exit={"exit"}
           className='btn' 
           type='button'
+          onClick={()=>setDetailPage(true)}
         >
           Details
       </motion.button>

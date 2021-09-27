@@ -6,7 +6,7 @@ import './Project3.css'
 // @ts-ignore
 import ScreenShot from '../../images/ouicirclesscreenshot.png'
 
-export default function Project3({ scrollDir }: any) {
+export default function Project3({ scrollDir, setDetailPage }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -183,7 +183,8 @@ export default function Project3({ scrollDir }: any) {
           exit={"exit"}
           className='ouiSS' 
           src={ScreenShot} 
-          alt='ouiCircles' 
+          alt='ouiCircles'
+          onClick={()=>setDetailPage(true)}
         />
       </Link>
       <motion.div 
@@ -212,6 +213,7 @@ export default function Project3({ scrollDir }: any) {
           exit={"exit"}
           className='btn' 
           type='button'
+          onClick={()=>setDetailPage(true)}
         >
           Details
         </motion.button>

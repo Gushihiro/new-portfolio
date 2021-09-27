@@ -9,7 +9,7 @@ import DesktopView from '../../images/circlesView.png'
 // @ts-ignore
 import ScreenShotPage from '../../images/ouiSSpage.png'
 import Footer from '../../components/Footer'
-const ouiCirclesPage = () => {
+const ouiCirclesPage = ({ setDetailPage }:any) => {
 
   return (
     <motion.div 
@@ -54,7 +54,13 @@ const ouiCirclesPage = () => {
           Community Forum
         </motion.h3>
         <Link to={`/ouicircles`}>
-          <button className='backBtn' type='button'>Back</button>
+          <button 
+            className='backBtn' 
+            type='button'
+            onClick={()=>setDetailPage(false)}
+          >
+            Back
+          </button>
         </Link>
         <Link to={'http://oui-circle-app.herokuapp.com/'} target='_blank'>
           <img className='ouiSS' src={ScreenShot} alt='ouiCircles' />

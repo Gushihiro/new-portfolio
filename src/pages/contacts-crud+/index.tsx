@@ -9,7 +9,7 @@ import DesktopView from '../../images/crudView.png'
 // @ts-ignore
 import ScreenShotPage from '../../images/crudSSpage.png'
 import Footer from '../../components/Footer'
-const ContactCrudPage = () => {
+const ContactCrudPage = ({ setDetailPage }:any) => {
 
   return (
     <motion.div 
@@ -83,7 +83,13 @@ const ContactCrudPage = () => {
           Web App
         </motion.h3>
         <Link to={`/contacts-crud`}>
-          <button className='backBtn2' type='button'>Back</button>
+          <button 
+            className='backBtn2' 
+            type='button'
+            onClick={()=>setDetailPage(false)}
+          >
+            Back
+          </button>
         </Link>
         <Link to={`https://gushihiro.github.io/contacts-crud/`} target='_blank'>
           <img className='crudSS' src={ScreenShot} alt='Contacts-CRUD' />

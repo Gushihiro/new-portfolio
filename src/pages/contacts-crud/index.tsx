@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 // @ts-ignore
 import ScreenShot from '../../images/contactCrudSS.png'
-export default function Project2({ scrollDir }: any) {
+export default function Project2({ scrollDir, setDetailPage }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -164,6 +164,7 @@ export default function Project2({ scrollDir }: any) {
           exit={"exit"}
           className='btn' 
           type='button'
+          onClick={()=>setDetailPage(true)}
         >
           Details
         </motion.button>
@@ -194,6 +195,7 @@ export default function Project2({ scrollDir }: any) {
         className='crudSS' 
         src={ScreenShot} 
         alt='Contact CRUD' 
+        onClick={()=>setDetailPage(true)}
       />
       <motion.div 
         ref={ref}
@@ -201,7 +203,8 @@ export default function Project2({ scrollDir }: any) {
         initial={"hidden"}
         animate={"visible"}
         exit={"exit"}
-        className='proj2Info'>
+        className='proj2Info'
+      >
         <h4>MySQL </h4>
         <h4>|</h4>
         <h4>Express </h4>

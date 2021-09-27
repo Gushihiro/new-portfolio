@@ -11,12 +11,12 @@ import KinetikDetails from '../../pages/kinetik+'
 import Project2 from '../../pages/contacts-crud'
 import CrudDetails from '../../pages/contacts-crud+'
 import Project3 from '../../pages/ouicircles'
-import ouiCirclesDetails from '../../pages/ouicircles+'
+import OuiCirclesDetails from '../../pages/ouicircles+'
 import Project4 from '../../pages/vedomy'
 import VedomyDetails from '../../pages/vedomy+'
 
 
-export default function ComponentCarousel({ scrollDir }: any) {
+export default function ComponentCarousel({ scrollDir, setFrameIdx, setDetailPage }: any) {
   const location = useLocation();
   
   return (
@@ -25,35 +25,58 @@ export default function ComponentCarousel({ scrollDir }: any) {
     >
       <Switch location={location} key={location.pathname}>
         <Route exact path='/vedomy+'>
-          <VedomyDetails />
+          <VedomyDetails 
+            setDetailPage={setDetailPage}
+          />
         </Route>
         <Route exact path='/vedomy'>
-          <Project4 
+          <Project4
+            setDetailPage={setDetailPage}
             scrollDir={scrollDir}
           />
         </Route>
-        <Route exact path='/ouicircles+' component={ouiCirclesDetails} />
+        <Route exact path='/ouicircles+'>
+          <OuiCirclesDetails 
+            setDetailPage={setDetailPage}
+          />
+        </Route>
         <Route exact path='/ouicircles'>
           <Project3
+          setDetailPage={setDetailPage}
             scrollDir={scrollDir}
           />
         </Route>
-        <Route exact path='/contacts-crud+' component={CrudDetails} />
+        <Route exact path='/contacts-crud+'>
+          <CrudDetails 
+            setDetailPage={setDetailPage}
+          />
+        </Route>
         <Route exact path='/contacts-crud'>
-          <Project2 
+          <Project2
+            setDetailPage={setDetailPage}
             scrollDir={scrollDir}
           />
         </Route>
-        <Route exact path='/kinetik+' component={KinetikDetails} />
+        <Route exact path='/kinetik+'>
+          <KinetikDetails 
+            setDetailPage={setDetailPage}
+          />
+        </Route>
         <Route exact path='/kinetik'>
           <Project1
+            setDetailPage={setDetailPage}
             scrollDir={scrollDir}
           />
         </Route>
-        <Route exact path='/about+' component={AboutDetails} />
+        <Route exact path='/about+'>
+          <AboutDetails 
+            setDetailPage={setDetailPage}
+          />
+        </Route>
         <Route exact path='/about'>
           <AboutPreview
             scrollDir={scrollDir}
+            setDetailPage={setDetailPage}
           />
         </Route>
         <Route exact path='/'>

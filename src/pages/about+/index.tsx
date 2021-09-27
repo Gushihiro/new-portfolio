@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Footer from '../../components/Footer'
 import './AboutMe.css'
 
-const AboutMePage = () => {
+const AboutMePage = ({ setDetailPage }:any) => {
 
   return (
     <motion.div 
@@ -32,7 +32,13 @@ const AboutMePage = () => {
         </p>
       </div>
       <Link to={`/about`}>
-        <button className='aboutBack' type='button'>Back</button>
+        <button 
+          className='aboutBack' 
+          type='button'
+          onClick={()=>setDetailPage(false)}
+        >
+          Back
+        </button>
       </Link>
       <Footer />
     </motion.div>

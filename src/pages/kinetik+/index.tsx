@@ -20,7 +20,7 @@ import CalendarSnip from '../../images/kinetikCalendar.png'
 import Footer from '../../components/Footer'
 
 
-const KinetikPage = () => {
+const KinetikPage = ({ setDetailPage }:any) => {
 
   return (
     <motion.div 
@@ -65,7 +65,13 @@ const KinetikPage = () => {
           Web App
         </motion.h3>
         <Link to={`/kinetik`}>
-          <button className='backBtn' type='button'>Back</button>
+          <button 
+            className='backBtn' 
+            type='button'
+            onClick={()=>setDetailPage(false)}
+          >
+            Back
+          </button>
         </Link>
         <Link to={`http://kinetikapp.herokuapp.com/`} target='_blank'>
           <img className='kinetikSS' src={ScreenShot} alt='Kinetik' />

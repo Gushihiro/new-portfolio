@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import './NavMini.css'
 
-export default function NavMini({ currentFrame, setCurrentFrame, setFrameIdx, frameIdx }: any) {
+export default function NavMini({ setFrameIdx, frameIdx }: any) {
   
   const history = useHistory();
 
@@ -47,7 +47,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(0);
-            setCurrentFrame("Header");
           }}
         >
           <div className={frameIdx === 0? 'navLinkActive':'navLink'}/>
@@ -60,7 +59,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(1);
-            setCurrentFrame("AboutMe");
           }}
         >
           <div className={frameIdx === 1? 'navLinkActive':'navLink'} />
@@ -73,7 +71,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(2);
-            setCurrentFrame("Kinetik");
           }}
         >
           <div className={frameIdx === 2? 'navLinkActive':'navLink'} />
@@ -86,7 +83,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(3);
-            setCurrentFrame("ContactsCRUD");
           }}
         >
           <div className={frameIdx === 3? 'navLinkActive':'navLink'} />
@@ -99,7 +95,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(4);
-            setCurrentFrame("ouiCircles");
           }}
         >
           <div className={frameIdx === 4? 'navLinkActive':'navLink'} />
@@ -112,7 +107,6 @@ useEffect(() => {
           tabIndex={0}
           onClick={()=> {
             setFrameIdx(5);
-            setCurrentFrame("Vedomy");
           }}
         >
           <div className={frameIdx === 5? 'navLinkActive':'navLink'} />

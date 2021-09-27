@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import ScreenShot from '../../images/AboutImgSS.jpg'
 import './AboutPreview.css'
 
-export default function AboutPreview({ scrollDir }: any) {
+export default function AboutPreview({ scrollDir, setFrameIdx, setDetailPage }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -120,7 +120,8 @@ export default function AboutPreview({ scrollDir }: any) {
           exit={"exit"}
           className='aboutPreSS' 
           src={ScreenShot} 
-          alt="VSCode" 
+          alt="VSCode"
+          onClick={()=>setDetailPage(true)}
         />
       </Link>
       <motion.h1
@@ -144,6 +145,7 @@ export default function AboutPreview({ scrollDir }: any) {
             exit={"exit"}
             className='abBtn' 
             type='button'
+            onClick={()=>{setDetailPage(true)}}
           >
             Learn More
           </motion.button>

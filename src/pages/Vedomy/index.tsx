@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 // @ts-ignore
 import ScreenShot from '../../images/vedomyscreenshot.png'
-export default function Project4({ scrollDir }: any) {
+export default function Project4({ scrollDir, setDetailPage }: any) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -165,6 +165,7 @@ export default function Project4({ scrollDir }: any) {
             exit={"exit"}
             className='btn' 
             type='button'
+            onClick={()=>setDetailPage(true)}
           >
             Details
           </motion.button>
@@ -196,7 +197,8 @@ export default function Project4({ scrollDir }: any) {
         exit={"exit"}
         className='vedomySS' 
         src={ScreenShot} 
-        alt='Vedomy' 
+        alt='Vedomy'
+        onClick={()=>setDetailPage(true)}
       />
       <motion.div 
         ref={ref}

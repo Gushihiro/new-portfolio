@@ -9,7 +9,7 @@ import DesktopView from '../../images/vedomyView.png'
 // @ts-ignore
 import ScreenShotPage from '../../images/vedomySSpage.png'
 import Footer from '../../components/Footer'
-const VedomyPage = () => {
+const VedomyPage = ({ setDetailPage }:any) => {
 
   return (
     <motion.div 
@@ -83,7 +83,13 @@ const VedomyPage = () => {
           Web App
         </motion.h3>
         <Link to={`/vedomy`}>
-          <button className='backBtn2' type='button'>Back</button>
+          <button 
+            className='backBtn2' 
+            type='button'
+            onClick={()=>setDetailPage(false)}
+          >
+            Back
+          </button>
         </Link>
         <Link to={`https://gushihiro.github.io/Vedomy/`} target='_blank'>
           <motion.img 
