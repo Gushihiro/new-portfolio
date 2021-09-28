@@ -6,10 +6,86 @@ import './AboutMe.css'
 
 const AboutMePage = ({ setDetailPage }:any) => {
 
+  const ssAni = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      scale: .7
+    },
+    exit: {
+      opacity: 0,
+      scale: .7,
+      transition: {
+        duration: 1.5
+      }
+    }
+  }
+
+  const textAni = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.3,
+        delay: .5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      y: 100
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+      transition: {
+        duration: 1.3
+      }
+    }
+  }
+
+  const btnAni = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: .7
+      }
+    }
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      scale: .8,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
   return (
-    <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
+    <motion.div
+      variants={pageAni}
+      initial={"inital"}
+      exit={"exit"}
       transition={{
         duration: 1.1
       }}

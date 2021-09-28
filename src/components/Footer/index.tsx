@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // @ts-ignore
 import GitHubIcon from '../../images/githubIcon.jpg'
 // @ts-ignore
@@ -28,9 +29,9 @@ export default function Footer() {
             <img className="footerImg" src={TwitterIcon} alt="Twitter" />
           </a>
           <Res />
-          <a href={'/#top'}>
+          <Link to={'/'}>
             <img className='footerImg' src={HomeIcon} alt='Home' />
-          </a>
+          </Link>
         </div>
         <div className='copyright'>
           <p>© Copyright 2021 Hiroto Robinson | Gushihiro</p>

@@ -11,25 +11,142 @@ import ScreenShotPage from '../../images/crudSSpage.png'
 import Footer from '../../components/Footer'
 const ContactCrudPage = ({ setDetailPage }:any) => {
 
+  const h1Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: 400,
+      opacity: 0
+    },
+    exit: {
+      x: 100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const h3Ani = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        delay: .5
+      }
+    },
+    hidden: {
+      x: -400,
+      opacity: 0
+    },
+    exit: {
+      x: -100,
+      opacity: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
+  const ssAni = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1.5
+      }
+    },
+    hidden: {
+      opacity: 0,
+      x: -100
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 1.5,
+        delay: .7
+      }
+    }
+  }
+
+  const stackAni = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 1.3
+      }
+    },
+    hidden: {
+      y: 100,
+      opacity: 0
+    },
+    exit: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        duration: 1.3
+      }
+    }
+  }
+
+  const btnAni = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1
+      }
+    },
+    hidden: {
+      opacity: 0
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: .7
+      }
+    }
+  }
+
+  const pageAni = {
+    initial: {
+      y: 0
+    },
+    exit: {
+      scale: .8,
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        delay: .5
+      }
+    }
+  }
+
   return (
-    <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      transition={{
-        duration: 1.1
-      }}
+    <motion.div
+      variants={pageAni}
+      initial={"initial"}
+      exit={"exit"}
       className='contactcrudPage'
     >
       <div className='project proj2'>
         <div className='proj2Btn'>
           <Link to={`https://gushihiro.github.io/contacts-crud/`} target='_blank'>
             <motion.button
-              initial={{opacity: 0, rotateY: 90}}
-              animate={{opacity: 1, rotateY: 0}}
-              transition={{
-                duration: 1.1,
-                delay: 1
-              }}
+              variants={btnAni}
+              initial={"hidden"}
+              animate={"visible"}
+              exit={"exit"}
               className='btn' 
               type='button'
             >
@@ -38,12 +155,10 @@ const ContactCrudPage = ({ setDetailPage }:any) => {
           </Link>
           <Link to={`https://github.com/Gushihiro/contacts-crud`} target='_blank'>
             <motion.button
-              initial={{opacity: 0, rotateY: 90}}
-              animate={{opacity: 1, rotateY: 0}}
-              transition={{
-                duration: 1.1,
-                delay: 1.2
-              }}
+              variants={btnAni}
+              initial={"hidden"}
+              animate={"visible"}
+              exit={"exit"}
               className='btn'
             >
               View GitHub
@@ -51,34 +166,18 @@ const ContactCrudPage = ({ setDetailPage }:any) => {
           </Link>
         </div>
         <motion.h1
-          initial={{
-            y: -50,
-            opacity: 0
-          }}
-          animate={{
-            y: 0,
-            opacity: 1
-          }}
-          transition={{
-            duration: 1.1,
-            delay: .5
-          }}
+          variants={h1Ani}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
         >
           Contact CRUD
         </motion.h1>
         <motion.h3
-          initial={{
-            y: -50,
-            opacity: 0
-          }}
-          animate={{
-            y: 0,
-            opacity: 1
-          }}
-          transition={{
-            duration: 1.1,
-            delay: .5
-          }}
+          variants={h3Ani}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
         >
           Web App
         </motion.h3>
@@ -92,21 +191,21 @@ const ContactCrudPage = ({ setDetailPage }:any) => {
           </button>
         </Link>
         <Link to={`https://gushihiro.github.io/contacts-crud/`} target='_blank'>
-          <img className='crudSS' src={ScreenShot} alt='Contacts-CRUD' />
+          <motion.img
+            variants={ssAni}
+            initial={"hidden"} 
+            animate={"visible"}
+            exit={"exit"} 
+            className='crudSS' 
+            src={ScreenShot} 
+            alt='Contacts-CRUD' 
+          />
         </Link>
         <motion.div 
-          initial={{
-            y: 50,
-            opacity: 0
-          }}
-          animate={{
-            y: 0,
-            opacity: 1
-          }}
-          transition={{
-            duration: 1.1,
-            delay: .5
-          }}
+          variants={stackAni}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
           className='proj2Info'
         >
             <h4>MySQL </h4>

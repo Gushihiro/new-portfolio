@@ -132,6 +132,7 @@ export default function Project2({ scrollDir, setDetailPage }: any) {
       }
     }
   }
+  
   const pageAniDown = {
     initial: {
       y: 0

@@ -9,11 +9,6 @@ import ScreenShot from '../../images/kinetikSS.png'
 import frontImg from '../../images/kinetic-logo.png'
 export default function Project1({ scrollDir, setDetailPage }: any) {
 
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    rootMargin: '-100px 0px'
-  })
-
   const h1Ani = {
     visible: {
       x: 0,
@@ -134,6 +129,7 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
       }
     }
   }
+
   const pageAniDown = {
     initial: {
       y: 0
@@ -158,7 +154,6 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
     >
       <motion.h1 
         key={6}
-        ref={ref}
         variants={h1Ani}
         initial={"hidden"}
         animate={"visible"}
@@ -168,7 +163,6 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
       </motion.h1>
       <motion.h3
         key={7}
-        ref={ref}
         variants={h3Ani}
         initial={"hidden"}
         animate={"visible"}
@@ -179,7 +173,6 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
       <Link to={`/kinetik+`}>
         <motion.img 
           key={8}
-          ref={ref}
           variants={ssAni}
           initial={"hidden"} 
           animate={"visible"}
@@ -192,7 +185,6 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
       </Link>
       <motion.div 
         key={9}
-        ref={ref}
         variants={stackAni}
         initial={"hidden"}
         animate={"visible"}
@@ -211,7 +203,6 @@ export default function Project1({ scrollDir, setDetailPage }: any) {
       <Link to={`/kinetik+`}>
         <motion.button
           key={10}
-          ref={ref}
           variants={btnAni}
           initial={"hidden"}
           animate={"visible"}
